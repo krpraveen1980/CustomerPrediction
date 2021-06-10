@@ -4,7 +4,7 @@ import pickle
 import tensorflow as tf
 
 app = Flask(__name__)
-model = tf.keras.models.load_model('CustomerCategory')
+model = tf.keras.models.load_model('CustomerCategory/saved_model.pb')
 scFeatures = pickle.load(open('CustomerCategoryFeatureMod.ft','rb'))
 
 @app.route('/')
